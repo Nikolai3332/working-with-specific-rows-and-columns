@@ -1,0 +1,35 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int[,] array = new int[4, 4];
+        int summSecondLine = 0;
+        int multiplicationFirstColumn = 0;
+        int lineNumber = 1;
+        int columnNumber = 0;
+        Random random = new Random();
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                array[i, j] = random.Next(0, 10);
+                Console.Write(array[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        for (int i = 0; i < array.GetLength(1); i++)
+        {
+            summSecondLine += array[lineNumber, i];
+        }
+
+        for (int j = 0; j < array.GetLength(0); j++)
+        {
+            multiplicationFirstColumn *= array[j, columnNumber];
+        }
+
+        Console.WriteLine($"Сумма второй строки - {summSecondLine};\nПроизведение первого столбца - {multiplicationFirstColumn}.");
+        Console.ReadKey();
+    }
+}
