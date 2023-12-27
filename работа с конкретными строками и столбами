@@ -4,7 +4,7 @@ internal class Program
     {
         int[,] array = new int[4, 4];
         int summSecondLine = 0;
-        int multiplicationFirstColumn = 0;
+        int multiplicationFirstColumn = 1;
         int lineNumber = 1;
         int columnNumber = 0;
         Random random = new Random();
@@ -24,9 +24,9 @@ internal class Program
             summSecondLine += array[lineNumber, i];
         }
 
-        for (int j = 0; j < array.GetLength(0); j++)
+        for (int i = 0; i < array.GetLength(0); i++)
         {
-            multiplicationFirstColumn *= array[j, columnNumber];
+            multiplicationFirstColumn *= array[i, columnNumber];
         }
 
         Console.WriteLine($"Сумма второй строки - {summSecondLine};\nПроизведение первого столбца - {multiplicationFirstColumn}.");
