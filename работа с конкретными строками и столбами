@@ -18,6 +18,7 @@ internal class Program
                 array[i, j] = random.Next(minValue, maxValue);
                 Console.Write(array[i, j] + " ");
             }
+
             Console.WriteLine();
         }
 
